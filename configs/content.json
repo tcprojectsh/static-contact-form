@@ -1,0 +1,48 @@
+{
+  "simsimau": {
+    "landing": {
+      "header": "header",
+      "heading": "heading",
+      "description": "description",
+      "footer": "footer",
+      "loginButtonText": "Login",
+      "contactButtonText": "Contact"
+    },
+    "login": {
+      "header": "header",
+      "heading": "heading",
+      "subheading": "subheading"
+    },
+    "contact": {
+      "header": "header",
+      "heading": "heading",
+      "subheading": "subheading",
+      "formfields": {
+        "text": ["Name", "Contact", "Location"],
+        "checkboxes": [
+          {
+            "key": "key1",
+            "label": "label key 1"
+          },
+          {
+            "key": "key2",
+            "label": "label key 2"
+          },
+          {
+            "key": "key3",
+            "label": "label key 3"
+          },
+          {
+            "key": "key4",
+            "label": "label key 3"
+          }
+        ]
+      }
+    },
+    "files": {
+      "header": "header",
+      "heading": "heading",
+      "subheading": "subheading"
+    }
+  }
+}

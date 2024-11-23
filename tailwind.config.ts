@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,11 +8,22 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        chilli: "url('/assets/images/chilli-oil.jpg')",
+        kitchen: "url('/assets/images/kitchen.jpg')",
+        table: "url('/assets/images/table.jpg')",
+      },
+      fontFamily: {
+        ttCommons: ["var(--font-tt-commons)"],
+        headingNow: ["var(--font-heading-now)"],
+        ttRamillas: ["var(--font-tt-ramillas)"],
+        magnolia: ["var(--font-magnolia)"],
+      },
+      screens: {
+        smDesktop: "1300px",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+export default config;
