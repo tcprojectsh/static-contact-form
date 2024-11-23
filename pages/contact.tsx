@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import cn from "clsx";
 import { useRouter } from "next/router";
@@ -55,7 +56,7 @@ const LoadingSpinner = () => {
 };
 
 export default function Contact() {
-  const { contact } = Content["simsimau"];
+  const { contact } = Content["staticTemplate"];
   const [loading, isLoading] = useState(false);
   const { checkboxes } = contact.formfields;
   const {
@@ -116,7 +117,13 @@ export default function Contact() {
 
     return (
       <form className="smDesktop:px-10 px-2" onSubmit={handleSubmit(onSubmit)}>
-        <Logo className="smDesktop:w-[160px] smDesktop:h-[160px] sm:h-[130px] sm:w-[130px] h-[100px] w-[100px] lg:mb-5 mr-auto ml-auto" />
+        <Image
+          priority
+          src={Logo}
+          alt="Logo"
+          width={150}
+          style={{ marginLeft: "auto", marginRight: "auto" }}
+        />
         <div className="smDesktop:flex smDesktop:items-center mb-5">
           <div className="smDesktop:w-1/3">
             <label

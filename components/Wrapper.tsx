@@ -1,4 +1,5 @@
 import cn from "clsx";
+import Image from "next/image";
 import Content from "@/configs/content.json";
 import { useRouter } from "next/router";
 import Logo from "@/public/assets/images/logo.svg";
@@ -8,7 +9,7 @@ import { TTCommons } from "@/utils/customFonts";
 const ttCommonsLight = `${TTCommons.variable} font-ttCommons font-light`;
 
 const Wrapper = ({ children }: { children: any }) => {
-  const { landing } = Content["simsimau"];
+  const { landing } = Content["staticTemplate"];
   const router = useRouter();
   const submittedRoute = router.pathname === "/submitted";
   const homeRoute = router.pathname === "/";
@@ -35,13 +36,12 @@ const Wrapper = ({ children }: { children: any }) => {
         >
           <div className="text-center">
             <div className="flex justify-center">
-              <Logo
-                className={cn(
-                  submittedRoute
-                    ? "smDesktop:w-[180px] smDesktop:h-[180px]"
-                    : "smDesktop:w-[140px] smDesktop:h-[140px]",
-                  "h-[100px] w-[100px] mb-3"
-                )}
+              <Image
+                priority
+                src={Logo}
+                alt="Logo"
+                width={150}
+                style={{ marginLeft: "auto", marginRight: "auto" }}
               />
             </div>
             <div className="relative h-full"> {children}</div>

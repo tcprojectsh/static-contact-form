@@ -21,7 +21,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  const { checkboxes } = Content["simsimau"].contact.formfields;
+  const { checkboxes } = Content["staticTemplate"].contact.formfields;
 
   if (req.method === "POST") {
     try {

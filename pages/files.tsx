@@ -10,7 +10,7 @@ export const ttCommonsBold = `${TTCommons.variable} font-ttCommons font-bold`;
 export default function Files() {
   const router = useRouter();
   const [validated, setValidated] = useState(false);
-  const { files } = Content["simsimau"];
+  const { files } = Content["staticTemplate"];
 
   useEffect(() => {
     if (

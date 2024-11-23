@@ -9,7 +9,7 @@ export const headingNowRegular = `${HeadingNow.variable} font-heading-now`;
 export const magnolia = `${MagnoliaScript.variable} font-magnolia`;
 
 export default function Home() {
-  const { landing } = Content["simsimau"];
+  const { landing } = Content["staticTemplate"];
 
   return (
     <>

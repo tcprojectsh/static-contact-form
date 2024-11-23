@@ -13,7 +13,7 @@ export const magnolia = `${MagnoliaScript.variable} font-magnolia`;
 
 export default function Login() {
   const router = useRouter();
-  const { login } = Content["simsimau"];
+  const { login } = Content["staticTemplate"];
   const [isError, setIsError] = useState(false);
 
   const {
